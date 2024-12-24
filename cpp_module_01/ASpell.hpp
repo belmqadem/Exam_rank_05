@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include "ATarget.hpp"
+
+class ATarget;
 
 class ASpell {
 protected:
@@ -12,10 +15,10 @@ public:
     ASpell(std::string name, std::string effects);
     ASpell(const ASpell &);
     ASpell& operator=(const ASpell &);
-    ~ASpell();
+    virtual ~ASpell();
 
     std::string getName() const;
     std::string getEffects() const;
-
     virtual ASpell* clone() const = 0;
+    void launch(const ATarget &) const;
 };

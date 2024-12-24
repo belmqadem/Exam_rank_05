@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include "ASpell.hpp"
+
+class ASpell;
 
 class ATarget {
 protected:
@@ -8,10 +11,12 @@ protected:
 
 public:
     ATarget();
+    ATarget(std::string type);
     ATarget(const ATarget &);
     ATarget& operator=(const ATarget &);
-    ~ATarget();
+    virtual ~ATarget();
 
-    std::string getType() const;
-    
+    const std::string& getType() const;
+    virtual ATarget* clone() const = 0;
+    void getHitBySpell(const ASpell &) const;
 };

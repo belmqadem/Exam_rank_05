@@ -8,8 +8,8 @@ ASpell::ASpell(const ASpell &other) : name(other.name), effects(other.effects) {
 
 ASpell& ASpell::operator=(const ASpell &other) {
     if (&other != this) {
-        this->name = other->name;
-        this->effects = other->effects;
+        this->name = other.name;
+        this->effects = other.effects;
     }
     return *this;
 }
@@ -22,4 +22,8 @@ std::string ASpell::getName() const {
 
 std::string ASpell::getEffects() const {
     return effects;
+}
+
+void ASpell::launch(const ATarget &target) const {
+    target.getHitBySpell(*this);
 }
