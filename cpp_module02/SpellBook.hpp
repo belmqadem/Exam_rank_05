@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ASpell.hpp"
-#include "ATarget.hpp"
 #include <vector>
 
 class SpellBook {

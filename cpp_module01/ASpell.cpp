@@ -7,10 +7,8 @@ ASpell::ASpell(std::string name, std::string effects) : name(name), effects(effe
 ASpell::ASpell(const ASpell &other) : name(other.name), effects(other.effects) {}
 
 ASpell& ASpell::operator=(const ASpell &other) {
-    if (&other != this) {
-        this->name = other.name;
-        this->effects = other.effects;
-    }
+    name = other.name;
+    effects = other.effects;
     return *this;
 }
 

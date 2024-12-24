@@ -8,11 +8,11 @@ Warlock::~Warlock() {
     std::cout << name << ": My job here is done!" << std::endl;
 }
 
-std::string Warlock::getName() const {
+std::string const &Warlock::getName() const {
     return name;
 }
 
-std::string Warlock::getTitle() const {
+std::string const &Warlock::getTitle() const {
     return title;
 }
 
@@ -21,7 +21,7 @@ void Warlock::setTitle(const std::string title) {
 }
 
 void Warlock::introduce() const {
-    std::cout << this->name << ": I am " << this->name << ", " << this->title << "!" << std::endl;
+    std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 }
 
 void Warlock::learnSpell(ASpell *spell) {

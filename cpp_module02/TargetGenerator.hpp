@@ -5,7 +5,7 @@
 
 class TargetGenerator {
 private:
-    std::vector<ATarget*> learnedTarget;
+    std::vector<ATarget*> targets;
 
     TargetGenerator(const TargetGenerator &);
     TargetGenerator& operator=(const TargetGenerator &);
