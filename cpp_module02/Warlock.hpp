@@ -1,8 +1,6 @@
 #pragma once
 
-#include "ASpell.hpp"
 #include "SpellBook.hpp"
-#include <vector>
 
 class Warlock {
 private:
@@ -17,8 +15,8 @@ public:
     Warlock(std::string name, std::string title);
     ~Warlock();
 
-    std::string getName() const;
-    std::string getTitle() const;
+    std::string const &getName() const;
+    std::string const &getTitle() const;
     void setTitle(const std::string title);
     void introduce() const;
 

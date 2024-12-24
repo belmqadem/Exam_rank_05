@@ -8,7 +8,7 @@ void SpellBook::learnSpell(ASpell* spell) {
     if (!spell) return ;
 
     for (std::vector<ASpell*>::iterator it = book.begin(); it != book.end(); ++it) {
-        if ((*it)->getName() == spell->getName())
+        if (spell->getName() == (*it)->getName())
             return ;
     }
     book.push_back(spell->clone());
@@ -17,7 +17,6 @@ void SpellBook::learnSpell(ASpell* spell) {
 void SpellBook::forgetSpell(std::string const &spellName) {
     for (std::vector<ASpell*>::iterator it = book.begin(); it != book.end(); ++it) {
         if ((*it)->getName() == spellName) {
-            delete (*it);
             book.erase(it);
             return ;
         }

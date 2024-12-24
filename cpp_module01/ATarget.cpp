@@ -7,9 +7,7 @@ ATarget::ATarget(std::string type) : type(type) {}
 ATarget::ATarget(const ATarget &other) : type(other.type) {}
 
 ATarget& ATarget::operator=(const ATarget &other) {
-    if (&other != this) {
-        this->type = other.type;
-    }
+    type = other.type;
     return *this;
 }
 
@@ -20,5 +18,5 @@ const std::string& ATarget::getType() const {
 }
 
 void ATarget::getHitBySpell(const ASpell &spell) const {
-    std::cout << this->type << " has been " << spell.getEffects() << "!" << std::endl;
+    std::cout << type << " has been " << spell.getEffects() << "!" << std::endl;
 }
