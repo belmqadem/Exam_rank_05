@@ -15,6 +15,7 @@ Warlock::~Warlock()
 	learned.clear();
 }
 
+<<<<<<< HEAD
 std::string const &Warlock::getName() const
 {
 	return name;
@@ -23,6 +24,14 @@ std::string const &Warlock::getName() const
 std::string const &Warlock::getTitle() const
 {
 	return title;
+=======
+std::string const &Warlock::getName() const {
+    return name;
+}
+
+std::string const &Warlock::getTitle() const {
+    return title;
+>>>>>>> b7dfb5b5a1d6e3b1f2384a8e6d2d6443d88560aa
 }
 
 void Warlock::setTitle(const std::string title)
@@ -30,9 +39,14 @@ void Warlock::setTitle(const std::string title)
 	this->title = title;
 }
 
+<<<<<<< HEAD
 void Warlock::introduce() const
 {
 	std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
+=======
+void Warlock::introduce() const {
+    std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
+>>>>>>> b7dfb5b5a1d6e3b1f2384a8e6d2d6443d88560aa
 }
 
 void Warlock::learnSpell(ASpell *spell)
