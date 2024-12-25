@@ -2,8 +2,9 @@
 
 #include "ASpell.hpp"
 
-class Fireball : public ASpell {
+class Fireball : public ASpell
+{
 public:
-    Fireball();
-    ASpell* clone() const;
+	Fireball();
+	ASpell *clone() const;
 };

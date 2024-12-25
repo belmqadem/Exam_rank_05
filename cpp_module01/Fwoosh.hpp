@@ -2,8 +2,9 @@
 
 #include "ASpell.hpp"
 
-class Fwoosh : public ASpell {
+class Fwoosh : public ASpell
+{
 public:
-    Fwoosh();
-    ASpell* clone() const;
+	Fwoosh();
+	ASpell *clone() const;
 };

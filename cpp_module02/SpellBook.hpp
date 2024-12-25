@@ -3,18 +3,19 @@
 #include "ASpell.hpp"
 #include <vector>
 
-class SpellBook {
+class SpellBook
+{
 private:
-    std::vector<ASpell*> book;
+	std::vector<ASpell *> book;
 
-    SpellBook(const SpellBook &);
-    SpellBook& operator=(const SpellBook &);
+	SpellBook(const SpellBook &);
+	SpellBook &operator=(const SpellBook &);
 
 public:
-    SpellBook();
-    ~SpellBook();
+	SpellBook();
+	~SpellBook();
 
-    void learnSpell(ASpell*);
-    void forgetSpell(std::string const &);
-    ASpell* createSpell(std::string const &);
+	void learnSpell(ASpell *);
+	void forgetSpell(std::string const &);
+	ASpell *createSpell(std::string const &);
 };

@@ -3,18 +3,19 @@
 #include "ATarget.hpp"
 #include <vector>
 
-class TargetGenerator {
+class TargetGenerator
+{
 private:
-    std::vector<ATarget*> targets;
+	std::vector<ATarget *> targets;
 
-    TargetGenerator(const TargetGenerator &);
-    TargetGenerator& operator=(const TargetGenerator &);
+	TargetGenerator(const TargetGenerator &);
+	TargetGenerator &operator=(const TargetGenerator &);
 
 public:
-    TargetGenerator();
-    ~TargetGenerator();
+	TargetGenerator();
+	~TargetGenerator();
 
-    void learnTargetType(ATarget*);
-    void forgetTargetType(std::string const &);
-    ATarget* createTarget(std::string const &);
+	void learnTargetType(ATarget *);
+	void forgetTargetType(std::string const &);
+	ATarget *createTarget(std::string const &);
 };
