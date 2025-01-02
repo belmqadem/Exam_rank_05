@@ -6,9 +6,7 @@ TargetGenerator::~TargetGenerator() {}
 
 void TargetGenerator::learnTargetType(ATarget *target)
 {
-	if (!target)
-		return;
-
+	if (!target) return;
 	for (std::vector<ATarget *>::iterator it = targets.begin(); it != targets.end(); ++it)
 	{
 		if (target->getType() == (*it)->getType())
@@ -34,9 +32,7 @@ ATarget *TargetGenerator::createTarget(std::string const &targetName)
 	for (std::vector<ATarget *>::iterator it = targets.begin(); it != targets.end(); ++it)
 	{
 		if (targetName == (*it)->getType())
-		{
 			return (*it)->clone();
-		}
 	}
 	return NULL;
 }

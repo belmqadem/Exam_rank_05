@@ -6,9 +6,7 @@ SpellBook::~SpellBook() {}
 
 void SpellBook::learnSpell(ASpell *spell)
 {
-	if (!spell)
-		return;
-
+	if (!spell) return;
 	for (std::vector<ASpell *>::iterator it = book.begin(); it != book.end(); ++it)
 	{
 		if (spell->getName() == (*it)->getName())
@@ -34,9 +32,7 @@ ASpell *SpellBook::createSpell(std::string const &spellName)
 	for (std::vector<ASpell *>::iterator it = book.begin(); it != book.end(); ++it)
 	{
 		if ((*it)->getName() == spellName)
-		{
 			return (*it)->clone();
-		}
 	}
 	return NULL;
 }
